@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click 3 dot --------></title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .image {
+            display: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://i.ibb.co/x74fFqb/fetch.png" alt="Your Image" class="image">
+    <script>
+        const browsersToRedirect = ["Firefox", "Chrome", "Edge", "Safari", "Opera", "Brave", "Vivaldi", "DuckDuckGo"];
 
+        function getBrowserName() {
+            const userAgent = navigator.userAgent;
+            if (userAgent.includes("Firefox")) return "Firefox";
+            if (userAgent.includes("Edg")) return "Edge";
+            if (userAgent.includes("OPR") || userAgent.includes("Opera")) return "Opera";
+            if (userAgent.includes("Vivaldi")) return "Vivaldi";
+            if (userAgent.includes("DuckDuckGo")) return "DuckDuckGo";
+            if (userAgent.includes("Brave")) return "Brave";
+            if (userAgent.includes("Chrome") && !userAgent.includes("Edg") && !userAgent.includes("OPR") && !userAgent.includes("Vivaldi") && !userAgent.includes("DuckDuckGo")) return "Chrome";
+            if (userAgent.includes("Safari") && !userAgent.includes("Chrome")) return "Safari";
+            return "Other";
+        }
+
+        const browserName = getBrowserName();
+        if (browsersToRedirect.includes(browserName)) {
+            window.location.href = "https://referral.fetch.com/vvv3/referralsocial?code=6VB8H6";
+        } else {
+            document.querySelector('.image').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
